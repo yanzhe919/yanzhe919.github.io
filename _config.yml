@@ -31,7 +31,7 @@ category_dir: categories
 code_dir: downloads/code #  Include code 文件夹，source_dir 下的子目录
 i18n_dir: :lang
 skip_render:
-    #- README.md
+  - README.md
 
 # Writing   设置生成博文的默认格式,不修改
 new_post_name: :year-:month-:day-:title.md # File name of new posts  #:year-:month-:day-:title.md
