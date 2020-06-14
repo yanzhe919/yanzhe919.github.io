@@ -1,6 +1,6 @@
 ---
 layout: post
-title: use docker multi-stage build
+title: Docker 多阶段构建示例 + Docker Hexo
 date: 2020-06-13 08:23:03
 tags:
  - docker
