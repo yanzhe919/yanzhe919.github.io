@@ -36,12 +36,18 @@ jobs:
         GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
         REPO: github.com/yanzhe919/yanzhe919.github.io
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
-        GITEE_REPO: gitee.com/yanzhe919/yanzhe919
       run: |
         cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
         git config --global user.email $GIT_EMAIL
         git commit -m "Site deployed by GitHub Actions"
         git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
-        git push --force --quiet "https://$GITEE_TOKEN@$GITEE_REPO" master:master
+    # Gitee 推送方式不同，现在只开放了 OpenAPI 和 OAuth ，可参考 https://blog.csdn.net/z_johnny/article/details/104061608 实现
+    # - name: Deploy to Gitee Pages
+    #   env:
+    #     GIT_NAME: yanzhe919
+    #     GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+    #     GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+    #     GITEE_REPO: gitee.com/yanzhe919/yanzhe919
+    #   run: |
+    #     git push --force --quiet "https://$GIT_NAME:$GITEE_TOKEN@$GITEE_REPO" master:master
