@@ -37,7 +37,7 @@ jobs:
         REPO: github.com/yanzhe919/yanzhe919.github.io
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
-        GITEE_REPO: gitee.com/yanzhe919/yanzhe919.git
+        GITEE_REPO: gitee.com/yanzhe919/yanzhe919
       run: |
         cd ./public && git init && git add .
         git config --global user.name $GIT_NAME
