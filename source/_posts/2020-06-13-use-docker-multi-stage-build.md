@@ -27,8 +27,7 @@ git init
 git pull https://github.com/yanzhe919/yanzhe919.github.io.git hexo:hexo
 ```
 
-> - 顺便解释一下，`git pull <gitRepo> hexo` 相当于 `git remote add origin https://github.com/yanzhe919/yanzhe919.github.io.git` + `git pull origin hexo` 
-> - 当然 `git pull origin hexo` 相当于 `git fetch origin hexo` + `git checkout -b hexo origin/hexo`
+> - 顺便解释一下， `git pull origin hexo` 相当于 `git fetch origin hexo` + `git checkout -b hexo origin/hexo`
 
   - `cd ~/hexo` ，以下操作都在 `~/hexo` 下执行
 
