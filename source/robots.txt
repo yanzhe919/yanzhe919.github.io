@@ -1,14 +1,8 @@
 # hexo robots.txt
+# allow all
 User-agent: *
 Allow: /
-Allow: /archives/
 
-Disallow: /vendors/
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
 
 Sitemap: https://blog.yanzhe.tk/sitemap.xml
 Sitemap: https://blog.yanzhe.tk/baidusitemap.xml

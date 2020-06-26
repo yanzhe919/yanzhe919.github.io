@@ -131,7 +131,7 @@ theme: next         #coney    #主题设置
 # Likely supports four looks, nine social networks, any button text.
 # You are free to modify the text value and order of any network.
 likely:
-  enable: true
+  enable: false
   cdn:
     js: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js
     css: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css
@@ -180,7 +180,7 @@ needmoreshare:
 # See: https://github.com/overtrue/share.js
 # networks: weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google
 sharejs:
-  enable: true
+  enable: false
   cdn:
     js: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.js
     css: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.css
