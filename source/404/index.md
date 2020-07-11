@@ -2,6 +2,24 @@
 title: 404
 date: 1970-01-01 00:00:00
 ---
+
+<div id="he-plugin-standard"></div>
+<script>
+WIDGET = {
+  CONFIG: {
+    "layout": 1,
+    "width": "450",
+    "height": "150",
+    "background": 1,
+    "dataColor": "FFFFFF",
+    "borderRadius": 5,
+    "key": "6b0ba07564434d1e94de1058a0d25df1"
+  }
+}
+</script>
+<script src="https://widget.heweather.net/standard/static/js/he-standard-common.js?v=1.1"></script>
+
+
 <div id="music163player">
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2981177242&auto=1&height=90"></iframe>
 </div>

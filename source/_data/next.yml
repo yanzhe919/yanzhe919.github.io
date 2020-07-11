@@ -383,7 +383,7 @@ codeblock:
     # Show text copy result.
     show_result: false
     # Available values: default | flat | mac
-    style: default
+    style: mac
 
 back2top:
   enable: true
@@ -610,7 +610,7 @@ comments:
     #disqus:
     #  text: Load Disqus
     #  order: -1
-    gitalk:
+    valine:
       order: -2
 
 # Disqus
@@ -714,6 +714,7 @@ facebook_comments_plugin:
 # 网易云跟帖
 #gentie_productKey: #your-gentie-product-key
 
+
 # Likely Share
 # See: https://ilyabirman.net/projects/likely/, https://github.com/ilyabirman/Likely
 # Likely supports four looks, nine social networks, any button text.
@@ -729,7 +730,7 @@ likely:
     facebook: Share
     linkedin: Link
     gplus: Plus
-    vkontakte: Share
+    vkontakte: VK
     odnoklassniki: Class
     telegram: Send
     whatsapp: Send
@@ -750,7 +751,7 @@ needmoreshare:
     js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
     css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
   postbottom:
-    enable: true
+    enable: false
     options:
       iconStyle: box
       boxForm: horizontal
@@ -768,14 +769,14 @@ needmoreshare:
 # See: https://github.com/overtrue/share.js
 # networks: weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google
 sharejs:
-  enable: true
+  enable: false
   cdn:
     js: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.js
     css: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.css
   networks: weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google
   wechat_qrcode:
-    title: share.title
-    prompt: share.prompt
+    title: 微信扫一扫：分享
+    prompt: 微信里点“发现”，扫一下二维码便可将本文分享至朋友
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
