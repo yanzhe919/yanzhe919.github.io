@@ -1,0 +1,20 @@
+#cloud-config
+
+rancher:
+  docker:
+    registry_mirror: https://registry.docker-cn.com
+  network:
+    #interfaces:
+    #    eth0:
+    #        address: 192.168.1.188/24
+    #        gateway: 192.168.1.254
+    #        mtu: 1500
+    #        dhcp: false
+    dns:
+      nameservers:
+       - 223.5.5.5
+       - 1.1.1.1
+
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDNdwM2gpzBg71pwcylJEE65QsHWGoX5UASAbgNvR8pirUJbVhBENlTwyROgKPPGPtbcyuVAH2bIu3j3HtDxWBG1+fL2cMegd/4X79emClufSBuquFH0ZgyRkUtxwVZxtLWkNi+U3GYPbvwXWZxmKQ63lmfD4/FH0ymkEteI0BPaQD5eq3gm0iRbZ/I/0543iSn1LULVNTsdAzu34OO89VbCS4eGs3OVLZGvitQE7SECuoavze/GiuNp9DMxu8qnOxOaRv7tp0zi4fSLTXUpPRixqwaXlmpNXawEHzPRz1tqf2dtBWgKy2HLKqDbU6+vpE2oDmwTsxGw0rL4H9iELMovovDrDWoVR8ZFFNMjW++MLcRw0S9YWzu3Urp1wghRVgQC436HQduzBLFl7eqn7KNK08i1X56IUM88vuUdQON8QBwhhudXFef3AeAYDK8lf9kApetx2Xh4czHNSFauQgNPfmLaiKzLv8BBWhjLNo/1I1HY400DAS/sZFXVJKEB/YnwbbgYah42cpS8AN2VgFmbq5UyOA/z8VkW0eBaVVia9XhgQDeLCyw/zsVJy09qwj7D9SkRy1OwoPPqKulAcbTfDw8Ayrw5kTmKF2oFUcv9hQXK1aAVOI1IGE5DJZql5nfuRcW097qCk+7D2UWNKQm5ORKTzl0jYvQe9ajW7OZjw== rancher@rancher
+# - ssh-rsa BBB...ZZZ example2@rancher

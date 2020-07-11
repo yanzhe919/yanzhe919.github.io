@@ -1,0 +1,20 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /about/
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+
+Sitemap: https://blog.yanzhe.tk/sitemap.xml
+Sitemap: https://blog.yanzhe.tk/baidusitemap.xml
+Sitemap: http://blog.yanzhe.tk/sitemap.xml
+Sitemap: http://blog.yanzhe.tk/baidusitemap.xml
