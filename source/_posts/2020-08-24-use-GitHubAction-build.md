@@ -372,6 +372,7 @@ on:
 
 jobs:
   hexo-deployment:
+  	name: Hexo deploy to GitHub Pages & Gitee Pages 
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
@@ -439,5 +440,17 @@ GitHub 发现了 workflow 文件以后，就会自动运行。你可以在网站
 等到 workflow 运行结束，访问 [GitHub Page](https://ruanyf.github.io/github-actions-demo/)，会看到构建成果已经发上网了。
 
 以后，每次修改后推送源码，GitHub Actions 都会自动运行，将构建产物发布到网页。
+
+```
+git status
+git add .
+git commit -m "尝试推送到Gitee"
+git push hexo
+```
+
+
+
+[参考链接 - GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+
 
 
