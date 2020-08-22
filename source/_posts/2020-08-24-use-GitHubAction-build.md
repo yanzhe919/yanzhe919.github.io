@@ -404,7 +404,6 @@ jobs:
         npm i -g hexo-cli
         npm i
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
-        cd ~
         git clone https://$GH_TOKEN@$REPO public
         hexo g
     # hexo clean & hexo g
@@ -417,8 +416,6 @@ jobs:
 
     - name: Deploy to Gitee Pages
       env:
-        GIT_NAME: yanzhe919
-        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
@@ -432,7 +429,7 @@ jobs:
         echo " User yanzhe" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
-        cd ~
+        cd ..
         git clone git@${GITEE_REPO} gitee_blog
         git rm -rf --cached ./public
         cd gitee_blog
