@@ -57,7 +57,7 @@ jobs:
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
         mkdir -p ~/.ssh/
-        echo "$ID_ED25519_GITEE" > ~/.ssh/id_ed25519_gitee
+        echo "${ID_ED25519_GITEE}" > ~/.ssh/id_ed25519_gitee
         chmod 600 ~/.ssh/id_ed25519_gitee
         ssh-keyscan gitee.com >> ~/.ssh/known_hosts
         ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
