@@ -40,8 +40,8 @@ jobs:
         npm i
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
         git clone https://$GH_TOKEN@$REPO public
-#       hexo clean
         hexo g
+    # hexo clean & hexo g
 
     - name: Deploy to Github Pages
       env:
