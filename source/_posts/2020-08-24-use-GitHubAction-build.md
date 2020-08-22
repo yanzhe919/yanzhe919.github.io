@@ -33,7 +33,7 @@ description: GitHub Actions 是 GitHub 的持续集成服务，于2018年10月�
 
 GitHub 做了一个[官方市场](https://github.com/marketplace?type=actions)，可以搜索到他人提交的 actions。另外，还有一个 [awesome actions](https://github.com/sdras/awesome-actions) 的仓库，也可以找到不少 action。
 
-![img](https://www.wangbase.com/blogimg/asset/201909/bg2019091105.jpg)
+![img](bg2019091105.jpg)
 
 上面说了，每个 action 就是一个独立脚本，因此可以做成代码仓库，使用`userName/repoName`的语法引用 action。比如，`actions/setup-node`就表示`github.com/actions/setup-node`这个[仓库](https://github.com/actions/setup-node)，它代表一个 action，作用是安装 Node.js。事实上，GitHub 官方的 actions 都放在 [github.com/actions](https://github.com/actions) 里面。
 
@@ -323,7 +323,7 @@ The key's randomart image is:
 
 找到 `~/.ssh/` 下 生成的 `id_ed25519_gitee.pub` ，在 Gitee Web 界面中，添加到 [Gitee SSH 公钥](https://gitee.com/profile/sshkeys) 。
 
-![Gitee SSH 公钥添加](2020-08-24-use-GithubAction-build.assets/28152030_EgY9.png)
+![Gitee SSH 公钥添加](28152030_EgY9.png)
 
 如果需要在本地进行验证，可在 ``~/.ssh/`` 下修改 `config` 文件。
 
@@ -426,6 +426,11 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519_gitee
         ssh-keyscan gitee.com >> ~/.ssh/known_hosts
         ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
+        echo "Host gitee.com
+ HostName gitee.com
+ User yanzhe
+ PreferredAuthentications publickey
+ IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
