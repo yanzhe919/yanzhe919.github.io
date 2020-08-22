@@ -409,8 +409,6 @@ jobs:
     # hexo clean & hexo g
 
     - name: Deploy to Github Pages
-      env:
-
       run: |
         cd ./public && git init && git add .
         git commit -m "Site deployed by GitHub Actions"
