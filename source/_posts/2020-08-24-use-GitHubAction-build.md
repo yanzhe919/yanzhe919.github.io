@@ -376,9 +376,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      GIT_NAME: yanzhe919
+      GIT_NAME: yanzhe
       GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-      REPO: github.com/yanzhe919/yanzhe919.github.io
+      REPO: github.com/yanzhe/yanzhe.github.io
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
@@ -404,6 +404,7 @@ jobs:
         npm i -g hexo-cli
         npm i
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
+        cd ~
         git clone https://$GH_TOKEN@$REPO public
         hexo g
     # hexo clean & hexo g
@@ -431,7 +432,9 @@ jobs:
         echo " User yanzhe" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
+        cd ~
         git clone git@${GITEE_REPO} gitee_blog
+        git rm -rf --cached ./public
         cd gitee_blog
         git checkout master
         cd ../
