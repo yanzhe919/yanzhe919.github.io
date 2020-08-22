@@ -40,7 +40,7 @@ jobs:
         npm i
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
         git clone https://$GH_TOKEN@$REPO public
-     #  hexo clean
+#       hexo clean
         hexo g
 
     - name: Deploy to Github Pages
@@ -58,6 +58,11 @@ jobs:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
+        mkdir -p ~/.ssh/
+        echo "$ID_ED25519_GITEE" > ~/.ssh/id_ed25519_gitee
+        chmod 600 ~/.ssh/id_ed25519_gitee
+        ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+        ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master

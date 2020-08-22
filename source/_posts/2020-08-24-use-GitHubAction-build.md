@@ -372,7 +372,7 @@ on:
 
 jobs:
   hexo-deployment:
-  	name: Hexo deploy to GitHub Pages & Gitee Pages 
+    name: Hexo deploy to GitHub Pages & Gitee Pages
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
@@ -405,7 +405,7 @@ jobs:
         npm i
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
         git clone https://$GH_TOKEN@$REPO public
-     #  hexo clean
+#       hexo clean
         hexo g
 
     - name: Deploy to Github Pages
@@ -415,6 +415,7 @@ jobs:
         cd ./public && git init && git add .
         git commit -m "Site deployed by GitHub Actions"
         git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
+
     - name: Deploy to Gitee Pages
       env:
         GIT_NAME: yanzhe919
@@ -422,6 +423,11 @@ jobs:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
+        mkdir -p ~/.ssh/
+        echo "$ID_ED25519_GITEE" > ~/.ssh/id_ed25519_gitee
+        chmod 600 ~/.ssh/id_ed25519_gitee
+        ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+        ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
@@ -431,6 +437,7 @@ jobs:
         git add .
         git commit -F ../commit-message.log
         git push --force --quiet "git@${GITEE_REPO}" master:master
+
 ```
 
 
