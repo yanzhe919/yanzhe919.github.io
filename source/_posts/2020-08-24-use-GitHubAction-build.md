@@ -445,7 +445,7 @@ GitHub 发现了 workflow 文件以后，就会自动运行。你可以在网站
 git status
 git add .
 git commit -m "尝试推送到Gitee"
-git push hexo
+git push hexo hexo
 ```
 
 
