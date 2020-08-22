@@ -61,11 +61,11 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519_gitee
         ssh-keyscan gitee.com >> ~/.ssh/known_hosts
         ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
-        echo "Host gitee.com
- HostName gitee.com
- User yanzhe919
- PreferredAuthentications publickey
- IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
+        echo "Host gitee.com" >> ~/.ssh/config
+        echo " HostName gitee.com" >> ~/.ssh/config
+        echo " User yanzhe919" >> ~/.ssh/config
+        echo " PreferredAuthentications publickey" >> ~/.ssh/config
+        echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
