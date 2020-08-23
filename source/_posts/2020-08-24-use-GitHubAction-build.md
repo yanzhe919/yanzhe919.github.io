@@ -419,6 +419,7 @@ jobs:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
+        cd ..
         mkdir -p ~/.ssh/
         echo "${ID_ED25519_GITEE}" > ~/.ssh/id_ed25519_gitee
         chmod 600 ~/.ssh/id_ed25519_gitee
@@ -429,9 +430,8 @@ jobs:
         echo " User yanzhe" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
-        cd ..
-        git clone git@${GITEE_REPO} gitee_blog
         git rm -rf --cached ./public
+        git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
         cd ../
