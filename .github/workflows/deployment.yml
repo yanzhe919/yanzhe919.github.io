@@ -48,14 +48,11 @@ jobs:
         cd ./public && git init && git add .
         git commit -m "Site deployed by GitHub Actions"
         git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
-        pwd
     - name: Deploy to Gitee Pages
       env:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
         GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
       run: |
-        pwd
-        cd ..
         mkdir -p ~/.ssh/
         echo "${ID_ED25519_GITEE}" > ~/.ssh/id_ed25519_gitee
         chmod 600 ~/.ssh/id_ed25519_gitee

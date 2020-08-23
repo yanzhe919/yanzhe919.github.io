@@ -417,9 +417,8 @@ jobs:
     - name: Deploy to Gitee Pages
       env:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
-        GITEE_REPO: gitee.com:yanzhe919/yanzhe919.git
+        GITEE_REPO: gitee.com:yanzhe/yanzhe.git
       run: |
-        cd ..
         mkdir -p ~/.ssh/
         echo "${ID_ED25519_GITEE}" > ~/.ssh/id_ed25519_gitee
         chmod 600 ~/.ssh/id_ed25519_gitee
