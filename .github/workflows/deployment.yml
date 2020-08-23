@@ -70,6 +70,7 @@ jobs:
         git checkout master
         cd ../
         \cp -rf ./public/* ./gitee_blog/
+        pwd
         diff -r ./public ./gitee_blog/
         pwd
         cd gitee_blog
