@@ -434,7 +434,7 @@ jobs:
         cd gitee_blog
         git checkout master
         cd ../
-        \cp -rf ./public ./gitee_blog/
+        \cp -rf ./public/* ./gitee_blog/
         cd gitee_blog
         git add .
         git commit -F ../commit-message.log
