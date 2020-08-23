@@ -71,8 +71,7 @@ jobs:
         git checkout master
         ls -ahlt ./
         cd ../
-        \cp -rf ./public ./gitee_blog/
-        cp -rf ./public ./gitee_blog/
+        \cp -rf ./public/* ./gitee_blog/
         diff -r ./public ./gitee_blog/
         cd gitee_blog
         git status
