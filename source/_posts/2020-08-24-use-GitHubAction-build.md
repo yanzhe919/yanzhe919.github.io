@@ -429,12 +429,12 @@ jobs:
         echo " User yanzhe" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
-		git rm -rf --cached public
+        git rm -rf --cached ./public
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
-        cd ..
-        cp -rf public gitee_blog
+        cd ../
+        \cp -rf ./public ./gitee_blog/
         cd gitee_blog
         git add .
         git commit -F ../commit-message.log
