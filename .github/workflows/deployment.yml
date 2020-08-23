@@ -66,7 +66,8 @@ jobs:
         pwd
         ls
         ls -ahlt ./public
-        git rm -rf --cached ./public
+        ls -ahlt ./public/tags
+        git rm -rf --cached --ignore-unmatch ./public
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
