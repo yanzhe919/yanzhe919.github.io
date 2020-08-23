@@ -71,6 +71,7 @@ jobs:
         cd ../
         \cp -rf ./public/* ./gitee_blog/
         diff -r ./public ./gitee_blog/
+        pwd
         cd gitee_blog
         pwd
         git status
