@@ -48,6 +48,7 @@ jobs:
         cd ./public && git init && git add .
         git commit -m "Site deployed by GitHub Actions"
         git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
+
     - name: Deploy to Gitee Pages
       env:
         ID_ED25519_GITEE: ${{ secrets.ID_ED25519_GITEE }}
@@ -70,11 +71,7 @@ jobs:
         git checkout master
         cd ../
         \cp -rf ./public/* ./gitee_blog/
-        pwd
-        diff -r ./public ./gitee_blog/
-        pwd
         cd gitee_blog
-        pwd
         git status
         git add .
         git commit -F ../commit-message.log
