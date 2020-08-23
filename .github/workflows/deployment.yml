@@ -64,6 +64,7 @@ jobs:
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
         git rm -rf --cached --ignore-unmatch ./public
+        rm -rf ./public/.git
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
@@ -71,6 +72,7 @@ jobs:
         \cp -rf ./public/* ./gitee_blog/
         diff -r ./public ./gitee_blog/
         cd gitee_blog
+        pwd
         git status
         git add .
         git commit -F ../commit-message.log
