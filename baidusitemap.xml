@@ -118,12 +118,6 @@
     <loc>https://blog.yanzhe.tk/2018/06/24/hexo-upgrade-and-change-next-theme/</loc>
     <lastmod>2020-08-23</lastmod>
   </url>  <url>
-    <loc>https://blog.yanzhe.tk/2020/08/24/use-GitHubAction-build/</loc>
-    <lastmod>2020-08-23</lastmod>
-  </url>  <url>
-    <loc>https://blog.yanzhe.tk/2015/02/06/Hexo-%E7%89%88%E6%9C%AC3-0%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%9D%91%E7%88%B9%EF%BC%8Cpublic%E4%B8%ADcss%E6%96%87%E4%BB%B6%E4%B8%8D%E5%87%BA%E6%9D%A5/</loc>
-    <lastmod>2020-08-23</lastmod>
-  </url>  <url>
     <loc>https://blog.yanzhe.tk/2015/07/21/IntelliJ-IDEA-shortcuts/</loc>
     <lastmod>2020-08-23</lastmod>
   </url>  <url>
@@ -143,6 +137,12 @@
     <lastmod>2020-08-23</lastmod>
   </url>  <url>
     <loc>https://blog.yanzhe.tk/2020/06/13/use-docker-multi-stage-build/</loc>
+    <lastmod>2020-08-23</lastmod>
+  </url>  <url>
+    <loc>https://blog.yanzhe.tk/2020/08/24/use-GitHubAction-build/</loc>
+    <lastmod>2020-08-23</lastmod>
+  </url>  <url>
+    <loc>https://blog.yanzhe.tk/2015/02/06/Hexo-%E7%89%88%E6%9C%AC3-0%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%9D%91%E7%88%B9%EF%BC%8Cpublic%E4%B8%ADcss%E6%96%87%E4%BB%B6%E4%B8%8D%E5%87%BA%E6%9D%A5/</loc>
     <lastmod>2020-08-23</lastmod>
   </url>
 </urlset>
