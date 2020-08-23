@@ -426,7 +426,7 @@ jobs:
         ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
         echo "Host gitee.com" >> ~/.ssh/config
         echo " HostName gitee.com" >> ~/.ssh/config
-        echo " User yanzhe" >> ~/.ssh/config
+        echo " User ${GIT_NAME}" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
         git rm -rf --cached --ignore-unmatch ./public

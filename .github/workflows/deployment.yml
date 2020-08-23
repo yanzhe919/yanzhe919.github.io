@@ -60,18 +60,20 @@ jobs:
         ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
         echo "Host gitee.com" >> ~/.ssh/config
         echo " HostName gitee.com" >> ~/.ssh/config
-        echo " User yanzhe919" >> ~/.ssh/config
+        echo " User ${GIT_NAME}" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
+        ls -ahlt ./public
         git rm -rf --cached --ignore-unmatch ./public
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
         git checkout master
-        ls -ahlt
+        ls -ahlt ./
         cd ../
         \cp -rf ./public ./gitee_blog/
         cp -rf ./public ./gitee_blog/
         cd gitee_blog
+        git status
         git add .
         git commit -F ../commit-message.log
         git push --force --quiet "git@${GITEE_REPO}" master:master
