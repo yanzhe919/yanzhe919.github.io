@@ -63,6 +63,8 @@ jobs:
         echo " User yanzhe919" >> ~/.ssh/config
         echo " PreferredAuthentications publickey" >> ~/.ssh/config
         echo " IdentityFile ~/.ssh/id_ed25519_gitee" >> ~/.ssh/config
+        pwd
+        ls
         git rm -rf --cached ./public
         git clone git@${GITEE_REPO} gitee_blog
         cd gitee_blog
