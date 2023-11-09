@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.yanzhe.tk    #用于绑定域名, 其他的不需要配置
+url: https://blog.yanzhe.top    #用于绑定域名, 其他的不需要配置
 root: /
 permalink: :year/:month/:day/:title/  # 本来为了 SEO 应该设置为 :title/ :year/:month/:day/:title/
 permalink_defaults:
